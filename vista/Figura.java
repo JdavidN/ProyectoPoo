@@ -22,7 +22,7 @@ import javax.swing.JDialog;
 
 
 
-public class Animal extends JDialog
+public class Figura extends JDialog
 {
  //----------------------
     //Atributos
@@ -57,7 +57,7 @@ public class Animal extends JDialog
     //-------------------------
         
     //Metodo constructor
-    public Animal()
+    public Figura()
     {
         //Definición del contenedor de la ventana
         setLayout(null);
