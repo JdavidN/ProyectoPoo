@@ -1,5 +1,5 @@
 # MIND_FIGURE
 
 ## Diagrama de Clases
-![Captura](Class-diagram.png "Captura")
+![Captura](Diagrama.png "Captura")
 
