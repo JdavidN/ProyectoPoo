@@ -36,7 +36,7 @@ public class Pareja extends JDialog
     private JComboBox cbEstrella;
     private JComboBox cbLlave;
     private JComboBox cbTeclado;
-    private String[] parejas = {"","Circulo", "Candado", "Cuchara", "Mouse", "luna"};
+    private String[] parejas = {"","Candado", "Cuchara", "Circulo", "Mouse", "luna"};
     private ImageIcon iImagenParejas;
     private JLabel lbImagenParejas;
     private JLabel lbParejas;
