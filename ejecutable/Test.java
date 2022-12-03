@@ -2,13 +2,17 @@ package ejecutable;
 
 import controlador.Controlador;
 import vista.VentanaPrincipal;
+import modelo.Usuario;
 
 public class Test
 {
     public static void main (String[] args)
     {
         VentanaPrincipal venPrin = new VentanaPrincipal();
-        Controlador miControlador = new Controlador(venPrin);
+
+        Usuario model = new Usuario("", 0);
+        Controlador miControlador = new Controlador(venPrin, model);
+
      
         
       
