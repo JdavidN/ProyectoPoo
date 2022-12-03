@@ -2,7 +2,7 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-
+import modelo.Usuario;
 import vista.VentanaPrincipal;
 
 public class Controlador implements ActionListener
@@ -10,6 +10,7 @@ public class Controlador implements ActionListener
     //Atributos
     //----------------------------
     private VentanaPrincipal venPrin;
+    private Usuario model;
   
     
     
@@ -18,10 +19,10 @@ public class Controlador implements ActionListener
     //----------------------------
     
     //Constructor
-    public Controlador(VentanaPrincipal venPrin)
+    public Controlador(VentanaPrincipal venPrin, Usuario model)
     
     {
-
+        this.model = model;
         this.venPrin = venPrin;
         this.venPrin.miPanelOperaciones.agregarOyentesBotones(this);
         
@@ -68,10 +69,20 @@ public class Controlador implements ActionListener
             this.venPrin.miFruta.agregarOyentesBotones(this);
         }
 
-        if(comando.equals("borrar"))
+        if(comando.equals("Registrar"))
         {
-            this.venPrin.miPanelEntradaDatos.borrar();
+             
+                String nomUsuario = venPrin.miPanelEntradaDatos.getNomUsu();
+                int edadUsuario = Integer.parseInt(venPrin.miPanelEntradaDatos.getEdadUsuario());
+
+                model = new Usuario(nomUsuario, edadUsuario);
+                JOptionPane.showMessageDialog(null, "Bienbenido " + nomUsuario + " a MIND-FIGURE ", "Felicidades", JOptionPane.ERROR_MESSAGE);
+                venPrin.miPanelOperaciones.activarBotones();
+                
+            
+            
         }
+
 
     
 
