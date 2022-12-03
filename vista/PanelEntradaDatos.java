@@ -1,5 +1,6 @@
 package vista;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -19,6 +20,7 @@ public class PanelEntradaDatos extends JPanel
     private ImageIcon iImagen;
     private JLabel lbImagen;
     private ImageIcon iImagen2;
+    public JButton btRegistro;
     private JLabel lbImagen2;
     private JLabel lbNombre;
     private JLabel lbUsuario;
@@ -76,9 +78,12 @@ public class PanelEntradaDatos extends JPanel
         lbEdad.setFont(new Font("Algerian", BOLD, 22));
         lbEdad.setForeground(Color.BLACK);
         lbEdad.setBounds(20,190,250,30);
-        lbEdad.setBackground(new ColorUIResource(160, 163, 162));
-        
+        lbEdad.setBackground(new ColorUIResource(160, 163, 162));  
         add(lbEdad);
+
+
+
+
         
 
         
@@ -103,12 +108,12 @@ public class PanelEntradaDatos extends JPanel
     }
     
     //Metodos de acceso a la información de las cajas de texto
-    public String getNomLib()
+    public String getNomUsu()
     {
         return (String) tfNombre.getText();
     }
 
-    public String getNomAutor()
+    public String getEdadUsuario()
     {
         return (String) tfEdad.getText();
     }
@@ -117,6 +122,7 @@ public class PanelEntradaDatos extends JPanel
 
 
 
+    
     //Metodo para borrar cajas de texto
     public void borrar()
     {

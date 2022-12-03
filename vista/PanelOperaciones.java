@@ -25,6 +25,7 @@ public class PanelOperaciones extends JPanel
     public JButton btParejas;
     public JButton btFiguraGeometrica;
     public JButton btSalir;
+    public JButton btRegistro;
     
     //----------------------
     //Metodos
@@ -36,49 +37,56 @@ public class PanelOperaciones extends JPanel
         //Definicion del contendor del panel
         setLayout(null);
         setBackground(Color.WHITE);
-        
+
 
 
         //Creación y adicion de los botones
+
+        btRegistro = new JButton("Registro");
+        btRegistro.setFont(new Font("Algerian", BOLD, 12));
+        btRegistro.setBounds(20, 20, 140, 30);
+        this.add(btRegistro);
+        btRegistro.setActionCommand("Registrar");
+
         btAnimales = new JButton("Animales");
-        btAnimales.setFont(new Font("Arial", BOLD, 12));
-        btAnimales.setBounds(30, 30, 140, 30);
+        btAnimales.setFont(new Font("Algerian", BOLD, 12));
+        btAnimales.setBounds(30, 80, 140, 30);
         add(btAnimales);
         btAnimales.setActionCommand("Animal");
 
         btElectrodomesticos = new JButton("Electrodomesticos");
-        btElectrodomesticos.setFont(new Font("Arial", BOLD, 12));
-        btElectrodomesticos.setBounds(80, 120, 180, 30);
+        btElectrodomesticos.setFont(new Font("Algerian", BOLD, 12));
+        btElectrodomesticos.setBounds(80, 170, 180, 30);
         add(btElectrodomesticos);
         btElectrodomesticos.setActionCommand("Electrodomestico");
 
 
         //Crear y agrear boton Borrar
         btFrutas = new JButton("Frutas");
-        btFrutas.setFont(new Font("Arial", BOLD, 12));
-        btFrutas.setBounds(210, 30, 140, 30);
+        btFrutas.setFont(new Font("Algerian", BOLD, 12));
+        btFrutas.setBounds(210, 80, 140, 30);
         this.add(btFrutas);
         btFrutas.setActionCommand("Fruta");
 
         //Crear y agrear boton Borrar
         btFiguraGeometrica = new JButton("Figura Geometrica");
-        btFiguraGeometrica.setFont(new Font("Arial", BOLD, 12));
-        btFiguraGeometrica.setBounds(300, 120, 180, 30);
+        btFiguraGeometrica.setFont(new Font("Algerian", BOLD, 12));
+        btFiguraGeometrica.setBounds(300, 170, 180, 30);
         this.add(btFiguraGeometrica);
         btFiguraGeometrica.setActionCommand("Figura");
 
 
          //Crear y agrear boton Borrar
          btParejas = new JButton("Parejas");
-         btParejas.setFont(new Font("Arial", BOLD, 12));
-         btParejas.setBounds(390, 30, 140, 30);
+         btParejas.setFont(new Font("Algerian", BOLD, 12));
+         btParejas.setBounds(390, 80, 140, 30);
          this.add(btParejas);
          btParejas.setActionCommand("Pareja");
 
         //Crear y agrear boton Salir
         btSalir = new JButton("Salir");
-        btSalir.setFont(new Font("Arial", BOLD, 12));
-        btSalir.setBounds(210, 230, 140, 30);
+        btSalir.setFont(new Font("Algerian", BOLD, 12));
+        btSalir.setBounds(210, 280, 140, 30);
         this.add(btSalir);
         btSalir.setActionCommand("salir");
         

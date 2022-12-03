@@ -31,25 +31,25 @@ public class Electrodomestico extends JDialog
 
     private ImageIcon iImagen;
     private JLabel lbImagen;
-    private JComboBox cbCirculo;
-    private JComboBox cbCuadrado;
-    private JComboBox cbRectangulo;
-    private JComboBox cbTriangulo;
-    private JComboBox cbRombo;
-    private String[] figuras = {"","Circulo", "Cuadrado", "Triangulo", "Rectangulo", "Rombo"};
-    private ImageIcon iImagenFiguras;
-    private JLabel lbImagenFiguras;
-    private JLabel lbFigura;
-    private ImageIcon iImagenCirculo;
-    private JLabel lbImagenCirculo;
-    private ImageIcon iImagenCuadrado;
-    private JLabel lbImagenCuadrado;
-    private ImageIcon iImagenRectangulo;
-    private JLabel lbImagenRectangulo;
-    private ImageIcon iImagenTriangulo;
-    private JLabel lbImagenTriangulo;
-    private ImageIcon iImagenRombo;
-    private JLabel lbImagenRombo;
+    private JComboBox cbTelevisor;
+    private JComboBox cbNevera;
+    private JComboBox cbLavadora;
+    private JComboBox cbMicroondas;
+    private JComboBox cbAspiradora;
+    private String[] electrodomestico = {"","Lavadora", "Nevera", "Aspiradora", "Microondas", "Televisor"};
+    private ImageIcon iImagenElectrodomesticos;
+    private JLabel lbImagenElectrodomesticos;
+    private JLabel lbElectrodomesticos;
+    private ImageIcon iImagenTelevisor;
+    private JLabel lbImagenTelevisor;
+    private ImageIcon iImagenNevera;
+    private JLabel lbImagenNevera;
+    private ImageIcon iImagenLavadora;
+    private JLabel lbImagenLavadora;
+    private ImageIcon iImagenMicroondas;
+    private JLabel lbImagenMicroondas;
+    private ImageIcon iImagenAspiradora;
+    private JLabel lbImagenAspiradora;
     private JButton btAceptar;
     
     //-------------------------
@@ -68,97 +68,98 @@ public class Electrodomestico extends JDialog
         lbImagen.setBounds(100,20,400,50);
         add(lbImagen);
 
-        iImagenFiguras = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenFiguras = new JLabel(iImagenFiguras);
-        lbImagenFiguras.setBounds(10,80,256,256);
-        add(lbImagenFiguras);
+        iImagenElectrodomesticos = new ImageIcon(getClass().getResource("imagenes/Electrodomesticos.jpg"));
+        lbImagenElectrodomesticos = new JLabel(iImagenElectrodomesticos);
+        lbImagenElectrodomesticos.setBounds(10,80,270,200);
+        lbImagenElectrodomesticos.setIcon(new ImageIcon(iImagenElectrodomesticos.getImage().getScaledInstance(270, 200, Image.SCALE_SMOOTH)));
+        add(lbImagenElectrodomesticos);
 
-        lbFigura = new JLabel("Figuras");
-        lbFigura.setFont(new Font("Algerian", BOLD, 50));
-        lbFigura.setForeground(Color.WHITE);
-        lbFigura.setBounds(310,150,260,50);
-        lbFigura.setBackground(new ColorUIResource(160, 163, 162));  
-        add(lbFigura);
+        lbElectrodomesticos = new JLabel("Electrodomesticos");
+        lbElectrodomesticos.setFont(new Font("Algerian", BOLD, 20));
+        lbElectrodomesticos.setForeground(Color.WHITE);
+        lbElectrodomesticos.setBounds(310,150,280,50);
+        lbElectrodomesticos.setBackground(new ColorUIResource(160, 163, 162));  
+        add(lbElectrodomesticos);
 
-        iImagenFiguras = new ImageIcon(getClass().getResource("imagenes/Text.png"));
-        lbImagenFiguras = new JLabel(iImagenFiguras);
-        lbImagenFiguras.setBounds(290,145,270,60);
-        add(lbImagenFiguras);
+        iImagenElectrodomesticos = new ImageIcon(getClass().getResource("imagenes/Text.png"));
+        lbImagenElectrodomesticos = new JLabel(iImagenElectrodomesticos);
+        lbImagenElectrodomesticos.setBounds(290,145,270,60);
+        add(lbImagenElectrodomesticos);
 
         //ComboBox y imangen
-        iImagenCirculo = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenCirculo = new JLabel(iImagenCirculo);
-        lbImagenCirculo.setBounds(20,310,150,150);
-        lbImagenCirculo.setIcon(new ImageIcon(iImagenCirculo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenCirculo);
-        cbCirculo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        iImagenTelevisor = new ImageIcon(getClass().getResource("imagenes/Televisor.png"));
+        lbImagenTelevisor = new JLabel(iImagenTelevisor);
+        lbImagenTelevisor.setBounds(20,310,150,150);
+        lbImagenTelevisor.setIcon(new ImageIcon(iImagenTelevisor.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        add(lbImagenTelevisor);
+        cbTelevisor = new JComboBox();
+        for(int i=0; i<electrodomestico.length;i++)
         {
-            cbCirculo.addItem(figuras[i]);
+            cbTelevisor.addItem(electrodomestico[i]);
         }
-        cbCirculo.setBounds(45,470,120,35);
-        this.add(cbCirculo);
+        cbTelevisor.setBounds(45,470,120,35);
+        this.add(cbTelevisor);
 
         //ComboBox y imangen 2
-        iImagenCuadrado = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenCuadrado = new JLabel(iImagenCuadrado);
-        lbImagenCuadrado.setBounds(205,310,150,150);
-        lbImagenCuadrado.setIcon(new ImageIcon(iImagenCuadrado.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenCuadrado);
+        iImagenNevera = new ImageIcon(getClass().getResource("imagenes/Nevera.png"));
+        lbImagenNevera = new JLabel(iImagenNevera);
+        lbImagenNevera.setBounds(205,310,150,150);
+        lbImagenNevera.setIcon(new ImageIcon(iImagenNevera.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        add(lbImagenNevera);
 
-        cbCuadrado = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbNevera = new JComboBox();
+        for(int i=0; i<electrodomestico.length;i++)
         {
-            cbCuadrado.addItem(figuras[i]);
+            cbNevera.addItem(electrodomestico[i]);
         }
-        cbCuadrado.setBounds(230,470,120,35);
-        this.add(cbCuadrado);
+        cbNevera.setBounds(230,470,120,35);
+        this.add(cbNevera);
 
 
         //ComboBox y imangen 3
-        iImagenRectangulo = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenRectangulo = new JLabel(iImagenRectangulo);
-        lbImagenRectangulo.setBounds(390,310,150,150);
-        lbImagenRectangulo.setIcon(new ImageIcon(iImagenRectangulo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenRectangulo);
+        iImagenLavadora = new ImageIcon(getClass().getResource("imagenes/Lavadora.png"));
+        lbImagenLavadora = new JLabel(iImagenLavadora);
+        lbImagenLavadora.setBounds(390,310,150,150);
+        lbImagenLavadora.setIcon(new ImageIcon(iImagenLavadora.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        add(lbImagenLavadora);
 
-        cbRectangulo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbLavadora = new JComboBox();
+        for(int i=0; i<electrodomestico.length;i++)
         {
-            cbRectangulo.addItem(figuras[i]);
+            cbLavadora.addItem(electrodomestico[i]);
         }
-        cbRectangulo.setBounds(415,470,120,35);
-        this.add(cbRectangulo);
+        cbLavadora.setBounds(415,470,120,35);
+        this.add(cbLavadora);
 
         //ComboBox y imangen 4
-        iImagenTriangulo = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenTriangulo = new JLabel(iImagenTriangulo);
-        lbImagenTriangulo.setBounds(85,545,150,150);
-        lbImagenTriangulo.setIcon(new ImageIcon(iImagenTriangulo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenTriangulo);
+        iImagenMicroondas = new ImageIcon(getClass().getResource("imagenes/microondas.png"));
+        lbImagenMicroondas = new JLabel(iImagenMicroondas);
+        lbImagenMicroondas.setBounds(85,545,150,150);
+        lbImagenMicroondas.setIcon(new ImageIcon(iImagenMicroondas.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        add(lbImagenMicroondas);
 
-        cbTriangulo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbMicroondas = new JComboBox();
+        for(int i=0; i<electrodomestico.length;i++)
         {
-            cbTriangulo.addItem(figuras[i]);
+            cbMicroondas.addItem(electrodomestico[i]);
         }
-        cbTriangulo.setBounds(110,705,120,35);
-        this.add(cbTriangulo);
+        cbMicroondas.setBounds(110,705,120,35);
+        this.add(cbMicroondas);
 
         //ComboBox y imangen 5
-        iImagenRombo = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenRombo = new JLabel(iImagenRombo);
-        lbImagenRombo.setBounds(325,545,150,150);
-        lbImagenRombo.setIcon(new ImageIcon(iImagenRombo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenRombo);
+        iImagenAspiradora = new ImageIcon(getClass().getResource("imagenes/Aspiradora.png"));
+        lbImagenAspiradora = new JLabel(iImagenAspiradora);
+        lbImagenAspiradora.setBounds(325,545,150,150);
+        lbImagenAspiradora.setIcon(new ImageIcon(iImagenAspiradora.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        add(lbImagenAspiradora);
 
-        cbRombo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbAspiradora = new JComboBox();
+        for(int i=0; i<electrodomestico.length;i++)
         {
-            cbRombo.addItem(figuras[i]);
+            cbAspiradora.addItem(electrodomestico[i]);
         }
-        cbRombo.setBounds(350,705,120,35);
-        this.add(cbRombo);
+        cbAspiradora.setBounds(350,705,120,35);
+        this.add(cbAspiradora);
 
     
             
@@ -170,17 +171,19 @@ public class Electrodomestico extends JDialog
         add(btAceptar);
 
 
-        iImagen = new ImageIcon(getClass().getResource("imagenes/Figura.jpg"));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/Engranajes.jpg"));
         lbImagen = new JLabel(iImagen);
         lbImagen.setBounds(5,10,580,450);
+        lbImagen.setIcon(new ImageIcon(iImagen.getImage().getScaledInstance(580, 450, Image.SCALE_SMOOTH)));
         add(lbImagen);
-        iImagen = new ImageIcon(getClass().getResource("imagenes/Figura.jpg"));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/Engranajes.jpg"));
         lbImagen = new JLabel(iImagen);
         lbImagen.setBounds(5,380,580,450);
+        lbImagen.setIcon(new ImageIcon(iImagen.getImage().getScaledInstance(580, 450, Image.SCALE_SMOOTH)));
         add(lbImagen);
 
         //Caracteristicas de la ventana
-        setTitle("Figuras Geometricas");
+        setTitle("Electrodomesticos");
         setSize(610,880);
         setLocationRelativeTo(null);
         setResizable(false);

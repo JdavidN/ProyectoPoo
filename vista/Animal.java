@@ -180,7 +180,7 @@ public class Animal extends JDialog
        
 
         //Caracteristicas de la ventana
-        setTitle("Figuras Geometricas");
+        setTitle("Animales");
         setSize(610,880);
         setLocationRelativeTo(null);
         setResizable(false);

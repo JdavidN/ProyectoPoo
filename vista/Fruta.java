@@ -31,25 +31,25 @@ public class Fruta extends JDialog
 
     private ImageIcon iImagen;
     private JLabel lbImagen;
-    private JComboBox cbCirculo;
-    private JComboBox cbCuadrado;
-    private JComboBox cbRectangulo;
-    private JComboBox cbTriangulo;
-    private JComboBox cbRombo;
-    private String[] figuras = {"","Circulo", "Cuadrado", "Triangulo", "Rectangulo", "Rombo"};
-    private ImageIcon iImagenFiguras;
-    private JLabel lbImagenFiguras;
-    private JLabel lbFigura;
-    private ImageIcon iImagenCirculo;
-    private JLabel lbImagenCirculo;
-    private ImageIcon iImagenCuadrado;
-    private JLabel lbImagenCuadrado;
-    private ImageIcon iImagenRectangulo;
-    private JLabel lbImagenRectangulo;
-    private ImageIcon iImagenTriangulo;
-    private JLabel lbImagenTriangulo;
-    private ImageIcon iImagenRombo;
-    private JLabel lbImagenRombo;
+    private JComboBox cbBanano;
+    private JComboBox cbManzana;
+    private JComboBox cbFresa;
+    private JComboBox cbNaranja;
+    private JComboBox cbpatilla;
+    private String[] frutas = {"","Fresa", "Naranja", "Fresa", "Patilla", "Banano"};
+    private ImageIcon iImagenFrutas;
+    private JLabel lbImagenFrutas;
+    private JLabel lbFrutas;
+    private ImageIcon iImagenBanano;
+    private JLabel lbImagenBanano;
+    private ImageIcon iImagenManzana;
+    private JLabel lbImagenManzana;
+    private ImageIcon iImagenFresa;
+    private JLabel lbImagenFresa;
+    private ImageIcon iImagenNaranja;
+    private JLabel lbImagenNaranja;
+    private ImageIcon iImagenpatilla;
+    private JLabel lbImagenpatilla;
     private JButton btAceptar;
     
     //-------------------------
@@ -68,97 +68,98 @@ public class Fruta extends JDialog
         lbImagen.setBounds(100,20,400,50);
         add(lbImagen);
 
-        iImagenFiguras = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenFiguras = new JLabel(iImagenFiguras);
-        lbImagenFiguras.setBounds(10,80,256,256);
-        add(lbImagenFiguras);
+        iImagenFrutas = new ImageIcon(getClass().getResource("imagenes/Frutascanasta.jpeg"));
+        lbImagenFrutas = new JLabel(iImagenFrutas);
+        lbImagenFrutas.setBounds(10,80,270,200);
+        lbImagenFrutas.setIcon(new ImageIcon(iImagenFrutas.getImage().getScaledInstance(270, 200, Image.SCALE_SMOOTH)));
+        add(lbImagenFrutas);
 
-        lbFigura = new JLabel("Figuras");
-        lbFigura.setFont(new Font("Algerian", BOLD, 50));
-        lbFigura.setForeground(Color.WHITE);
-        lbFigura.setBounds(310,150,260,50);
-        lbFigura.setBackground(new ColorUIResource(160, 163, 162));  
-        add(lbFigura);
+        lbFrutas = new JLabel("Frutas");
+        lbFrutas.setFont(new Font("Algerian", BOLD, 50));
+        lbFrutas.setForeground(Color.WHITE);
+        lbFrutas.setBounds(330,150,250,50);
+        lbFrutas.setBackground(new ColorUIResource(160, 163, 162));  
+        add(lbFrutas);
 
-        iImagenFiguras = new ImageIcon(getClass().getResource("imagenes/Text.png"));
-        lbImagenFiguras = new JLabel(iImagenFiguras);
-        lbImagenFiguras.setBounds(290,145,270,60);
-        add(lbImagenFiguras);
+        iImagenFrutas = new ImageIcon(getClass().getResource("imagenes/Text.png"));
+        lbImagenFrutas = new JLabel(iImagenFrutas);
+        lbImagenFrutas.setBounds(290,145,270,60);
+        add(lbImagenFrutas);
 
         //ComboBox y imangen
-        iImagenCirculo = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenCirculo = new JLabel(iImagenCirculo);
-        lbImagenCirculo.setBounds(20,310,150,150);
-        lbImagenCirculo.setIcon(new ImageIcon(iImagenCirculo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenCirculo);
-        cbCirculo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        iImagenBanano = new ImageIcon(getClass().getResource("imagenes/banano.png"));
+        lbImagenBanano = new JLabel(iImagenBanano);
+        lbImagenBanano.setBounds(20,310,150,150);
+        lbImagenBanano.setIcon(new ImageIcon(iImagenBanano.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        add(lbImagenBanano);
+        cbBanano = new JComboBox();
+        for(int i=0; i<frutas.length;i++)
         {
-            cbCirculo.addItem(figuras[i]);
+            cbBanano.addItem(frutas[i]);
         }
-        cbCirculo.setBounds(45,470,120,35);
-        this.add(cbCirculo);
+        cbBanano.setBounds(45,470,120,35);
+        this.add(cbBanano);
 
         //ComboBox y imangen 2
-        iImagenCuadrado = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenCuadrado = new JLabel(iImagenCuadrado);
-        lbImagenCuadrado.setBounds(205,310,150,150);
-        lbImagenCuadrado.setIcon(new ImageIcon(iImagenCuadrado.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenCuadrado);
+        iImagenManzana = new ImageIcon(getClass().getResource("imagenes/Manzana.png"));
+        lbImagenManzana = new JLabel(iImagenManzana);
+        lbImagenManzana.setBounds(205,310,150,150);
+        lbImagenManzana.setIcon(new ImageIcon(iImagenManzana.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        add(lbImagenManzana);
 
-        cbCuadrado = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbManzana = new JComboBox();
+        for(int i=0; i<frutas.length;i++)
         {
-            cbCuadrado.addItem(figuras[i]);
+            cbManzana.addItem(frutas[i]);
         }
-        cbCuadrado.setBounds(230,470,120,35);
-        this.add(cbCuadrado);
+        cbManzana.setBounds(230,470,120,35);
+        this.add(cbManzana);
 
 
         //ComboBox y imangen 3
-        iImagenRectangulo = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenRectangulo = new JLabel(iImagenRectangulo);
-        lbImagenRectangulo.setBounds(390,310,150,150);
-        lbImagenRectangulo.setIcon(new ImageIcon(iImagenRectangulo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenRectangulo);
+        iImagenFresa = new ImageIcon(getClass().getResource("imagenes/Fresa.png"));
+        lbImagenFresa = new JLabel(iImagenFresa);
+        lbImagenFresa.setBounds(390,310,150,150);
+        lbImagenFresa.setIcon(new ImageIcon(iImagenFresa.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        add(lbImagenFresa);
 
-        cbRectangulo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbFresa = new JComboBox();
+        for(int i=0; i<frutas.length;i++)
         {
-            cbRectangulo.addItem(figuras[i]);
+            cbFresa.addItem(frutas[i]);
         }
-        cbRectangulo.setBounds(415,470,120,35);
-        this.add(cbRectangulo);
+        cbFresa.setBounds(415,470,120,35);
+        this.add(cbFresa);
 
         //ComboBox y imangen 4
-        iImagenTriangulo = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenTriangulo = new JLabel(iImagenTriangulo);
-        lbImagenTriangulo.setBounds(85,545,150,150);
-        lbImagenTriangulo.setIcon(new ImageIcon(iImagenTriangulo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenTriangulo);
+        iImagenNaranja = new ImageIcon(getClass().getResource("imagenes/naranja.png"));
+        lbImagenNaranja = new JLabel(iImagenNaranja);
+        lbImagenNaranja.setBounds(85,545,150,150);
+        lbImagenNaranja.setIcon(new ImageIcon(iImagenNaranja.getImage().getScaledInstance(160, 160, Image.SCALE_SMOOTH)));
+        add(lbImagenNaranja);
 
-        cbTriangulo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbNaranja = new JComboBox();
+        for(int i=0; i<frutas.length;i++)
         {
-            cbTriangulo.addItem(figuras[i]);
+            cbNaranja.addItem(frutas[i]);
         }
-        cbTriangulo.setBounds(110,705,120,35);
-        this.add(cbTriangulo);
+        cbNaranja.setBounds(110,705,120,35);
+        this.add(cbNaranja);
 
         //ComboBox y imangen 5
-        iImagenRombo = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
-        lbImagenRombo = new JLabel(iImagenRombo);
-        lbImagenRombo.setBounds(325,545,150,150);
-        lbImagenRombo.setIcon(new ImageIcon(iImagenRombo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenRombo);
+        iImagenpatilla = new ImageIcon(getClass().getResource("imagenes/patilla.png"));
+        lbImagenpatilla = new JLabel(iImagenpatilla);
+        lbImagenpatilla.setBounds(325,545,150,150);
+        lbImagenpatilla.setIcon(new ImageIcon(iImagenpatilla.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
+        add(lbImagenpatilla);
 
-        cbRombo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbpatilla = new JComboBox();
+        for(int i=0; i<frutas.length;i++)
         {
-            cbRombo.addItem(figuras[i]);
+            cbpatilla.addItem(frutas[i]);
         }
-        cbRombo.setBounds(350,705,120,35);
-        this.add(cbRombo);
+        cbpatilla.setBounds(350,705,120,35);
+        this.add(cbpatilla);
 
     
             
@@ -170,17 +171,15 @@ public class Fruta extends JDialog
         add(btAceptar);
 
 
-        iImagen = new ImageIcon(getClass().getResource("imagenes/Figura.jpg"));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/cosecha.jpg"));
         lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(5,10,580,450);
+        lbImagen.setBounds(5,10,580,860);
+        lbImagen.setIcon(new ImageIcon(iImagen.getImage().getScaledInstance(580, 830, Image.SCALE_SMOOTH)));
         add(lbImagen);
-        iImagen = new ImageIcon(getClass().getResource("imagenes/Figura.jpg"));
-        lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(5,380,580,450);
-        add(lbImagen);
+        
 
         //Caracteristicas de la ventana
-        setTitle("Figuras Geometricas");
+        setTitle("Frutas");
         setSize(610,880);
         setLocationRelativeTo(null);
         setResizable(false);
