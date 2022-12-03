@@ -199,3 +199,4 @@ public class Figura extends JDialog
         this.dispose();
     }    
 }
+
