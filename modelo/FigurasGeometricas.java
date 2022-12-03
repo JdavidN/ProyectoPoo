@@ -8,6 +8,15 @@ public class FigurasGeometricas
     private String rectangulo;
     private String rombo;
 
+    public  FigurasGeometricas(String pcirculo, String pcuadrado, String ptriangulo, String prectangulo,String prombo)
+    {
+        this.rombo= prombo;
+        this.triangulo=ptriangulo;
+        this.cuadrado=pcuadrado;
+        this.rectangulo=prectangulo;
+        this.circulo=pcirculo;
+    }
+
     public String getCirculo()
     {
         return circulo;
