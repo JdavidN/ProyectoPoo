@@ -1,6 +1,8 @@
 package vista;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Image;
+
 import static java.awt.Font.BOLD;
 import java.awt.event.ActionListener;
 
@@ -83,9 +85,10 @@ public class PanelOperaciones extends JPanel
         //Borde y titulo del panel
        
 
-        img = new ImageIcon(getClass().getResource("mod.jpg"));
+        img = new ImageIcon(getClass().getResource("imagenes/mod.jpg"));
         labImagen2 = new JLabel(img);
-        labImagen2.setBounds(10,10,900,900);
+        labImagen2.setBounds(0,0,600,600);
+        labImagen2.setIcon(new ImageIcon(img.getImage().getScaledInstance(600, 600, Image.SCALE_SMOOTH)));
         add(labImagen2);
     }
 

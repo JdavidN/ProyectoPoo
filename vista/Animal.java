@@ -31,25 +31,25 @@ public class Animal extends JDialog
 
     private ImageIcon iImagen;
     private JLabel lbImagen;
-    private JComboBox cbCirculo;
-    private JComboBox cbCuadrado;
-    private JComboBox cbRectangulo;
-    private JComboBox cbTriangulo;
-    private JComboBox cbRombo;
-    private String[] figuras = {"","Circulo", "Cuadrado", "Triangulo", "Rectangulo", "Rombo"};
-    private ImageIcon iImagenFiguras;
-    private JLabel lbImagenFiguras;
-    private JLabel lbFigura;
-    private ImageIcon iImagenCirculo;
-    private JLabel lbImagenCirculo;
-    private ImageIcon iImagenCuadrado;
-    private JLabel lbImagenCuadrado;
-    private ImageIcon iImagenRectangulo;
-    private JLabel lbImagenRectangulo;
-    private ImageIcon iImagenTriangulo;
-    private JLabel lbImagenTriangulo;
-    private ImageIcon iImagenRombo;
-    private JLabel lbImagenRombo;
+    private JComboBox cbElefante;
+    private JComboBox cbTigre;
+    private JComboBox cbKoala;
+    private JComboBox cbAguila;
+    private JComboBox cbLoro;
+    private String[] animales = {"","Aguila", "Elefante", "Koala", "Tigre", "Loro"};
+    private ImageIcon iImagenAnimales;
+    private JLabel lbImagenAnimales;
+    private JLabel lbanimal;
+    private ImageIcon iImagenElefante;
+    private JLabel lbImagenElefante;
+    private ImageIcon iImagenTigre;
+    private JLabel lbImagenTigre;
+    private ImageIcon iImagenKoala;
+    private JLabel lbImagenKoala;
+    private ImageIcon iImagenAguila;
+    private JLabel lbImagenAguila;
+    private ImageIcon iImagenLoro;
+    private JLabel lbImagenLoro;
     private JButton btAceptar;
     
     //-------------------------
@@ -63,102 +63,104 @@ public class Animal extends JDialog
         setLayout(null);
             
       
-        iImagen = new ImageIcon(getClass().getResource("Titulo.PNG"));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/Titulo.PNG"));
         lbImagen = new JLabel(iImagen);
         lbImagen.setBounds(100,20,400,50);
         add(lbImagen);
 
-        iImagenFiguras = new ImageIcon(getClass().getResource("objects-icon.png"));
-        lbImagenFiguras = new JLabel(iImagenFiguras);
-        lbImagenFiguras.setBounds(10,80,256,256);
-        add(lbImagenFiguras);
 
-        lbFigura = new JLabel("Figuras");
-        lbFigura.setFont(new Font("Algerian", BOLD, 50));
-        lbFigura.setForeground(Color.WHITE);
-        lbFigura.setBounds(310,150,260,50);
-        lbFigura.setBackground(new ColorUIResource(160, 163, 162));  
-        add(lbFigura);
+        iImagenAnimales = new ImageIcon(getClass().getResource("imagenes/leon.jpg"));
+        lbImagenAnimales = new JLabel(iImagenAnimales);
+        lbImagenAnimales.setBounds(10,80,270,200);
+        lbImagenAnimales.setIcon(new ImageIcon(iImagenAnimales.getImage().getScaledInstance(270, 200, Image.SCALE_SMOOTH)));
+        add(lbImagenAnimales);
 
-        iImagenFiguras = new ImageIcon(getClass().getResource("Text.png"));
-        lbImagenFiguras = new JLabel(iImagenFiguras);
-        lbImagenFiguras.setBounds(290,145,270,60);
-        add(lbImagenFiguras);
+        lbanimal = new JLabel("Animales");
+        lbanimal.setFont(new Font("Algerian", BOLD, 48));
+        lbanimal.setForeground(Color.WHITE);
+        lbanimal.setBounds(310,150,260,50);
+        lbanimal.setBackground(new ColorUIResource(160, 163, 162));  
+        add(lbanimal);
+
+        iImagenAnimales = new ImageIcon(getClass().getResource("imagenes/Text.png"));
+        lbImagenAnimales = new JLabel(iImagenAnimales);
+        lbImagenAnimales.setBounds(290,145,280,60);
+        add(lbImagenAnimales);
 
         //ComboBox y imangen
-        iImagenCirculo = new ImageIcon(getClass().getResource("objects-icon.png"));
-        lbImagenCirculo = new JLabel(iImagenCirculo);
-        lbImagenCirculo.setBounds(20,310,150,150);
-        lbImagenCirculo.setIcon(new ImageIcon(iImagenCirculo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenCirculo);
-        cbCirculo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        iImagenElefante = new ImageIcon(getClass().getResource("imagenes/Elefante.jpg"));
+        lbImagenElefante = new JLabel(iImagenElefante);
+        lbImagenElefante.setBounds(20,310,150,150);
+        lbImagenElefante.setIcon(new ImageIcon(iImagenElefante.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
+        add(lbImagenElefante);
+        cbElefante = new JComboBox();
+        for(int i=0; i<animales.length;i++)
         {
-            cbCirculo.addItem(figuras[i]);
+            cbElefante.addItem(animales[i]);
         }
-        cbCirculo.setBounds(45,470,120,35);
-        this.add(cbCirculo);
+        cbElefante.setBounds(45,470,120,35);
+        this.add(cbElefante);
 
         //ComboBox y imangen 2
-        iImagenCuadrado = new ImageIcon(getClass().getResource("objects-icon.png"));
-        lbImagenCuadrado = new JLabel(iImagenCuadrado);
-        lbImagenCuadrado.setBounds(205,310,150,150);
-        lbImagenCuadrado.setIcon(new ImageIcon(iImagenCuadrado.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenCuadrado);
+        iImagenTigre = new ImageIcon(getClass().getResource("imagenes/Tigre.jpg"));
+        lbImagenTigre = new JLabel(iImagenTigre);
+        lbImagenTigre.setBounds(205,310,150,150);
+        lbImagenTigre.setIcon(new ImageIcon(iImagenTigre.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
+        add(lbImagenTigre);
 
-        cbCuadrado = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbTigre = new JComboBox();
+        for(int i=0; i<animales.length;i++)
         {
-            cbCuadrado.addItem(figuras[i]);
+            cbTigre.addItem(animales[i]);
         }
-        cbCuadrado.setBounds(230,470,120,35);
-        this.add(cbCuadrado);
+        cbTigre.setBounds(230,470,120,35);
+        this.add(cbTigre);
 
 
         //ComboBox y imangen 3
-        iImagenRectangulo = new ImageIcon(getClass().getResource("objects-icon.png"));
-        lbImagenRectangulo = new JLabel(iImagenRectangulo);
-        lbImagenRectangulo.setBounds(390,310,150,150);
-        lbImagenRectangulo.setIcon(new ImageIcon(iImagenRectangulo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenRectangulo);
+        iImagenKoala = new ImageIcon(getClass().getResource("imagenes/Koala.jpeg"));
+        lbImagenKoala = new JLabel(iImagenKoala);
+        lbImagenKoala.setBounds(390,310,150,150);
+        lbImagenKoala.setIcon(new ImageIcon(iImagenKoala.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
+        add(lbImagenKoala);
 
-        cbRectangulo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbKoala = new JComboBox();
+        for(int i=0; i<animales.length;i++)
         {
-            cbRectangulo.addItem(figuras[i]);
+            cbKoala.addItem(animales[i]);
         }
-        cbRectangulo.setBounds(415,470,120,35);
-        this.add(cbRectangulo);
+        cbKoala.setBounds(415,470,120,35);
+        this.add(cbKoala);
 
         //ComboBox y imangen 4
-        iImagenTriangulo = new ImageIcon(getClass().getResource("objects-icon.png"));
-        lbImagenTriangulo = new JLabel(iImagenTriangulo);
-        lbImagenTriangulo.setBounds(85,545,150,150);
-        lbImagenTriangulo.setIcon(new ImageIcon(iImagenTriangulo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenTriangulo);
+        iImagenAguila = new ImageIcon(getClass().getResource("imagenes/Aguila.jpg"));
+        lbImagenAguila = new JLabel(iImagenAguila);
+        lbImagenAguila.setBounds(85,545,150,150);
+        lbImagenAguila.setIcon(new ImageIcon(iImagenAguila.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
+        add(lbImagenAguila);
 
-        cbTriangulo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbAguila = new JComboBox();
+        for(int i=0; i<animales.length;i++)
         {
-            cbTriangulo.addItem(figuras[i]);
+            cbAguila.addItem(animales[i]);
         }
-        cbTriangulo.setBounds(110,705,120,35);
-        this.add(cbTriangulo);
+        cbAguila.setBounds(110,705,120,35);
+        this.add(cbAguila);
 
         //ComboBox y imangen 5
-        iImagenRombo = new ImageIcon(getClass().getResource("objects-icon.png"));
-        lbImagenRombo = new JLabel(iImagenRombo);
-        lbImagenRombo.setBounds(325,545,150,150);
-        lbImagenRombo.setIcon(new ImageIcon(iImagenRombo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
-        add(lbImagenRombo);
+        iImagenLoro = new ImageIcon(getClass().getResource("imagenes/Loro.jpg"));
+        lbImagenLoro = new JLabel(iImagenLoro);
+        lbImagenLoro.setBounds(325,545,150,150);
+        lbImagenLoro.setIcon(new ImageIcon(iImagenLoro.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
+        add(lbImagenLoro);
 
-        cbRombo = new JComboBox();
-        for(int i=0; i<figuras.length;i++)
+        cbLoro = new JComboBox();
+        for(int i=0; i<animales.length;i++)
         {
-            cbRombo.addItem(figuras[i]);
+            cbLoro.addItem(animales[i]);
         }
-        cbRombo.setBounds(350,705,120,35);
-        this.add(cbRombo);
+        cbLoro.setBounds(350,705,120,35);
+        this.add(cbLoro);
 
     
             
@@ -170,14 +172,12 @@ public class Animal extends JDialog
         add(btAceptar);
 
 
-        iImagen = new ImageIcon(getClass().getResource("Figura.jpg"));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/Fondoani.jpg"));
         lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(5,10,580,450);
+        lbImagen.setBounds(0,0,610,900);
+        lbImagen.setIcon(new ImageIcon(iImagen.getImage().getScaledInstance(610, 900, Image.SCALE_SMOOTH)));
         add(lbImagen);
-        iImagen = new ImageIcon(getClass().getResource("Figura.jpg"));
-        lbImagen = new JLabel(iImagen);
-        lbImagen.setBounds(5,380,580,450);
-        add(lbImagen);
+       
 
         //Caracteristicas de la ventana
         setTitle("Figuras Geometricas");

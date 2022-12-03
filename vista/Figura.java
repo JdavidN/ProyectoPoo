@@ -36,7 +36,7 @@ public class Figura extends JDialog
     private JComboBox cbRectangulo;
     private JComboBox cbTriangulo;
     private JComboBox cbRombo;
-    private String[] figuras = {"","Circulo", "Cuadrado", "Triangulo", "Rectangulo", "Rombo"};
+    private String[] figuras = {"","Cuadrado", "Triangulo", "Rombo", "Circulo", "Rectangulo"};
     private ImageIcon iImagenFiguras;
     private JLabel lbImagenFiguras;
     private JLabel lbFigura;
@@ -63,12 +63,12 @@ public class Figura extends JDialog
         setLayout(null);
             
       
-        iImagen = new ImageIcon(getClass().getResource("Titulo.PNG"));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/Titulo.PNG"));
         lbImagen = new JLabel(iImagen);
         lbImagen.setBounds(100,20,400,50);
         add(lbImagen);
 
-        iImagenFiguras = new ImageIcon(getClass().getResource("objects-icon.png"));
+        iImagenFiguras = new ImageIcon(getClass().getResource("imagenes/objects-icon.png"));
         lbImagenFiguras = new JLabel(iImagenFiguras);
         lbImagenFiguras.setBounds(10,80,256,256);
         add(lbImagenFiguras);
@@ -80,13 +80,13 @@ public class Figura extends JDialog
         lbFigura.setBackground(new ColorUIResource(160, 163, 162));  
         add(lbFigura);
 
-        iImagenFiguras = new ImageIcon(getClass().getResource("Text.png"));
+        iImagenFiguras = new ImageIcon(getClass().getResource("imagenes/Text.png"));
         lbImagenFiguras = new JLabel(iImagenFiguras);
         lbImagenFiguras.setBounds(290,145,270,60);
         add(lbImagenFiguras);
 
         //ComboBox y imangen
-        iImagenCirculo = new ImageIcon(getClass().getResource("objects-icon.png"));
+        iImagenCirculo = new ImageIcon(getClass().getResource("imagenes/circulo.png"));
         lbImagenCirculo = new JLabel(iImagenCirculo);
         lbImagenCirculo.setBounds(20,310,150,150);
         lbImagenCirculo.setIcon(new ImageIcon(iImagenCirculo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
@@ -100,7 +100,7 @@ public class Figura extends JDialog
         this.add(cbCirculo);
 
         //ComboBox y imangen 2
-        iImagenCuadrado = new ImageIcon(getClass().getResource("objects-icon.png"));
+        iImagenCuadrado = new ImageIcon(getClass().getResource("imagenes/cuadrado.png"));
         lbImagenCuadrado = new JLabel(iImagenCuadrado);
         lbImagenCuadrado.setBounds(205,310,150,150);
         lbImagenCuadrado.setIcon(new ImageIcon(iImagenCuadrado.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
@@ -116,7 +116,7 @@ public class Figura extends JDialog
 
 
         //ComboBox y imangen 3
-        iImagenRectangulo = new ImageIcon(getClass().getResource("objects-icon.png"));
+        iImagenRectangulo = new ImageIcon(getClass().getResource("imagenes/Rectangulo.png"));
         lbImagenRectangulo = new JLabel(iImagenRectangulo);
         lbImagenRectangulo.setBounds(390,310,150,150);
         lbImagenRectangulo.setIcon(new ImageIcon(iImagenRectangulo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
@@ -131,7 +131,7 @@ public class Figura extends JDialog
         this.add(cbRectangulo);
 
         //ComboBox y imangen 4
-        iImagenTriangulo = new ImageIcon(getClass().getResource("objects-icon.png"));
+        iImagenTriangulo = new ImageIcon(getClass().getResource("imagenes/Triangulopng.png"));
         lbImagenTriangulo = new JLabel(iImagenTriangulo);
         lbImagenTriangulo.setBounds(85,545,150,150);
         lbImagenTriangulo.setIcon(new ImageIcon(iImagenTriangulo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
@@ -146,10 +146,10 @@ public class Figura extends JDialog
         this.add(cbTriangulo);
 
         //ComboBox y imangen 5
-        iImagenRombo = new ImageIcon(getClass().getResource("objects-icon.png"));
+        iImagenRombo = new ImageIcon(getClass().getResource("imagenes/Rombo.png"));
         lbImagenRombo = new JLabel(iImagenRombo);
         lbImagenRombo.setBounds(325,545,150,150);
-        lbImagenRombo.setIcon(new ImageIcon(iImagenRombo.getImage().getScaledInstance(170, 170, Image.SCALE_SMOOTH)));
+        lbImagenRombo.setIcon(new ImageIcon(iImagenRombo.getImage().getScaledInstance(150, 150, Image.SCALE_SMOOTH)));
         add(lbImagenRombo);
 
         cbRombo = new JComboBox();
@@ -170,11 +170,11 @@ public class Figura extends JDialog
         add(btAceptar);
 
 
-        iImagen = new ImageIcon(getClass().getResource("Figura.jpg"));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/Figura.jpg"));
         lbImagen = new JLabel(iImagen);
         lbImagen.setBounds(5,10,580,450);
         add(lbImagen);
-        iImagen = new ImageIcon(getClass().getResource("Figura.jpg"));
+        iImagen = new ImageIcon(getClass().getResource("imagenes/Figura.jpg"));
         lbImagen = new JLabel(iImagen);
         lbImagen.setBounds(5,380,580,450);
         add(lbImagen);
